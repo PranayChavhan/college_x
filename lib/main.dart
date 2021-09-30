@@ -1,3 +1,5 @@
+import 'package:college_x/authenticate/as_a_student/login.dart';
+import 'package:college_x/authenticate/as_a_student/signup.dart';
 import 'package:college_x/utils/routes.dart';
 import 'package:college_x/widgets/theme.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         // "/": (BuildContext context) => LoginPage(),
         MyRoutes.onboardingRoute : (BuildContext context) => OnboardingScreen(),
         MyRoutes.optionPageRoute: (BuildContext context) => OptionPage(),
+        MyRoutes.loginPageRoute: (BuildContext context) => LoginPage(),
+        MyRoutes.signupPageRoute: (BuildContext context) => SignupPage(),
       },
       // home:  OnboardingScreen()  OptionPage(),
     );

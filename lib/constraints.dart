@@ -47,7 +47,7 @@ final kBodyTextBold = TextStyle(
 
 final kBodyText = TextStyle(
   fontFamily: 'Roboto',
-  fontSize: SizeConfig.blockSizeH! * 4.5,
+  fontSize: SizeConfig.blockSizeH! * 4,
   color: ColorConstants.kDarkColor,
 );
 

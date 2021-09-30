@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constraints.dart';
+import 'as_a_student/login.dart';
 
 class OptionPage extends StatefulWidget {
   const OptionPage({Key? key}) : super(key: key);
@@ -17,102 +18,80 @@ class _OptionPageState extends State<OptionPage> {
     double sizeV = SizeConfig.blockSizeV!;
     return Scaffold(
       backgroundColor: ColorConstants.kLightColor,
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: [
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 140),
-                      child: Image.asset("assets/images/main_top.png"),
-                    )
-                  ],
+      body: Container(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 40),
+            child: Column(
+              children: [
+                Image.asset("assets/images/app_logo.jpg", width: sizeH* 20, height: sizeV * 20,),
+                Text("Welcome to College_X",
+                style: kTitle,
                 ),
-              ),
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Sign in",
-                    style: kTitle,
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20,left: 20),
-                      child: SizedBox(
-                        height: sizeV * 7,
-                        child: ElevatedButton.icon(
-                            icon: const Icon(
-                              Icons.account_box,
-                              color: Colors.black,
-                              size: 22.0,
-                            ),
-                            label: const Text('     As a Student     ',style: TextStyle(fontSize: 18,color: Colors.black),),
-                            onPressed: () {},
-                            style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      // side: const BorderSide(color: Colors.red)
-                                    ),
-                                )
-                            ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20,left: 20),
-                      child: SizedBox(
-                        height: sizeV * 7,
-                        child: ElevatedButton.icon(
-                            icon: const Icon(
-                              Icons.account_balance,
-                              color: Colors.black,
-                              size: 22.0,
-                            ),
-                            label: const Text('     As a Teacher     ',style: TextStyle(fontSize: 18,color: Colors.black),),
-                            onPressed: () {},
-                            style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      // side: const BorderSide(color: Colors.red)
-                                    )
-                                )
+                Image.asset("assets/images/onboarding_image_3.png"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: SizedBox(
+                    height: SizeConfig.blockSizeH! * 15.5,
+                    width: SizeConfig.blockSizeH! * 100,
+                    child: TextButton(
+                      onPressed: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()
                             )
-                        ),
+                        );
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.account_box, color: ColorConstants.kSecondaryColor,),
+                          SizedBox(width: sizeH * 2,),
+                          Text(
+                            "As a Student",
+                            style: kBodyTextBold,
+                          ),
+                        ],
+                      ),
+                      style: TextButton.styleFrom(
+                        backgroundColor: ColorConstants.kPrimaryColor,
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 89, left: 80),
-                      child: Image.asset("assets/images/main_bottom.png"),
-                    )
-                  ],
+                SizedBox(
+                  height: sizeV * 3,
                 ),
-              ),
-            ],
-
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: SizedBox(
+                    height: SizeConfig.blockSizeH! * 15.5,
+                    width: SizeConfig.blockSizeH! * 100,
+                    child: TextButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.account_balance, color: ColorConstants.kSecondaryColor,),
+                          SizedBox(width: sizeH * 2,),
+                          Text(
+                            "As a Teacher",
+                            style: kBodyTextBold,
+                          ),
+                        ],
+                      ),
+                      style: TextButton.styleFrom(
+                        backgroundColor: ColorConstants.kPrimaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-
         ),
-      )
+      ),
     );
   }
 }
