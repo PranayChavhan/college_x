@@ -35,6 +35,7 @@ class _OptionPageState extends State<OptionPage> {
                     height: SizeConfig.blockSizeH! * 15.5,
                     width: SizeConfig.blockSizeH! * 100,
                     child: TextButton(
+
                       onPressed: (){
                         Navigator.push(
                             context,

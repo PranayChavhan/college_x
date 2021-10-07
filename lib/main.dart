@@ -1,17 +1,20 @@
+
 import 'package:college_x/authenticate/as_a_student/login.dart';
 import 'package:college_x/authenticate/as_a_student/signup.dart';
 import 'package:college_x/utils/routes.dart';
-import 'package:college_x/widgets/theme.dart';
+import 'package:college_x/utils/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'Home/bottombarpage.dart';
+import 'Home/drawerpage.dart';
 import 'authenticate/optionpage.dart';
 import 'onboarding/onboarding_screen.dart';
 
-void main() async{
-
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //To show status bar
+  await Firebase.initializeApp();
 
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -32,6 +35,8 @@ class MyApp extends StatelessWidget {
         MyRoutes.optionPageRoute: (BuildContext context) => OptionPage(),
         MyRoutes.loginPageRoute: (BuildContext context) => LoginPage(),
         MyRoutes.signupPageRoute: (BuildContext context) => SignupPage(),
+        MyRoutes.drawerpagePageRoute: (BuildContext context) => DrawerPage(),
+        MyRoutes.bottombarPageRoute: (BuildContext context) => BottomBar(),
       },
       // home:  OnboardingScreen()  OptionPage(),
     );

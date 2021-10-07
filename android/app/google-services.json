@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "94906112366",
+    "project_id": "collegex-84595",
+    "storage_bucket": "collegex-84595.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94906112366:android:01dff552b709e3ead3897f",
+        "android_client_info": {
+          "package_name": "com.collegex.college_x"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94906112366-3o2uhm7o6mhvu7g1p9rb9uvovdjg99m0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.collegex.college_x",
+            "certificate_hash": "ff937cf9314f68d5628a8a85d5df27ad711f5eb4"
+          }
+        },
+        {
+          "client_id": "94906112366-kdh403ml9tm24gvi640q047j0b4028t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy0e7eYqYUmyvpkxJk7E2ap-76y7lhYjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94906112366-kdh403ml9tm24gvi640q047j0b4028t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
